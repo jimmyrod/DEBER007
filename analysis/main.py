@@ -6,62 +6,28 @@ from typing import List, Tuple
 
 
 # -------------------------------
-# Data generation
+# Data loading
 # -------------------------------
 
-def generate_dataset(n: int = 600, seed: int = 7) -> Tuple[List[List[float]], List[int], List[str]]:
-    random.seed(seed)
-    rows: List[List[float]] = []
-    labels: List[int] = []
-    feature_names = [
-        "age",
-        "annual_income",
-        "debt_ratio",
-        "prior_defaults",
-        "employment_years",
-        "education_level",
-    ]
+def load_dataset(path: str) -> Tuple[List[List[float]], List[int], List[str]]:
+    """Load the cybersecurity dataset uploaded to the repository."""
 
-    for _ in range(n):
-        age = random.randint(21, 70)
-        income = random.randint(15000, 120000)
-        debt_ratio = round(random.uniform(0.05, 0.95), 3)
-        prior_defaults = random.randint(0, 5)
-        employment_years = random.randint(0, 30)
-        education_level = random.choice([0, 1])  # 1 = university/technical degree
-
-        # latent score encodes ground-truth behavior
-        score = (
-            0.03 * (age - 40)
-            + 0.00005 * (income - 45000)
-            - 1.5 * debt_ratio
-            - 0.8 * prior_defaults
-            + 0.05 * employment_years
-            + 0.4 * education_level
-            + random.gauss(0, 0.5)
+    if not os.path.exists(path):
+        raise FileNotFoundError(
+            f"No se encontró el dataset requerido en {path}. Coloque 'cybersecurity synthesized data.csv' en la carpeta data/."
         )
 
-        label = 1 if score > 0 else 0
-        rows.append([
-            age,
-            income,
-            debt_ratio,
-            prior_defaults,
-            employment_years,
-            education_level,
-        ])
-        labels.append(label)
-
+    rows: List[List[float]] = []
+    labels: List[int] = []
+    with open(path, newline="", encoding="utf-8") as f:
+        reader = csv.reader(f)
+        header = next(reader)
+        feature_names = header[:-1]
+        for line in reader:
+            *features, label = line
+            rows.append([float(x) for x in features])
+            labels.append(int(float(label)))
     return rows, labels, feature_names
-
-
-def save_csv(rows: List[List[float]], labels: List[int], feature_names: List[str], path: str) -> None:
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow([*feature_names, "good_credit"])
-        for values, label in zip(rows, labels):
-            writer.writerow([*values, label])
 
 
 # -------------------------------
@@ -362,10 +328,9 @@ def save_line_chart(x: List[float], y: List[float], title: str, x_label: str, y_
 
 
 def main():
-    rows, labels, feature_names = generate_dataset()
-    csv_path = os.path.join("data", "synthetic_credit.csv")
-    save_csv(rows, labels, feature_names, csv_path)
-    print(f"Dataset saved to {csv_path} with {len(rows)} rows")
+    csv_path = os.path.join("data", "cybersecurity synthesized data.csv")
+    rows, labels, feature_names = load_dataset(csv_path)
+    print(f"Dataset cargado desde {csv_path} con {len(rows)} filas")
 
     standardized, means, stds = standardize_columns(rows)
     X_train, X_test, y_train, y_test = train_test_split(standardized, labels)
@@ -391,36 +356,36 @@ def main():
     save_bar_chart(perm, "Permutation Feature Importance", perm_chart_path)
     print(f"Saved permutation chart to {perm_chart_path}")
 
-    # PDP for income and debt ratio
-    income_index = feature_names.index("annual_income")
-    debt_index = feature_names.index("debt_ratio")
-    income_values = [x for x in range(-2, 3)]  # standardized scale
-    debt_values = [round(-1.5 + i * 0.5, 2) for i in range(7)]
+    # PDP for network volume and alert count
+    volume_idx = feature_names.index("src_bytes")
+    alert_idx = feature_names.index("alert_count")
+    volume_values = [round(-2 + i * 0.5, 2) for i in range(9)]
+    alert_values = [round(-2 + i * 0.5, 2) for i in range(9)]
 
-    income_pdp = partial_dependence(weights, bias, X_test, income_index, income_values)
-    debt_pdp = partial_dependence(weights, bias, X_test, debt_index, debt_values)
+    volume_pdp = partial_dependence(weights, bias, X_test, volume_idx, volume_values)
+    alert_pdp = partial_dependence(weights, bias, X_test, alert_idx, alert_values)
 
-    income_chart_path = os.path.join("outputs", "pdp_income.svg")
+    volume_chart_path = os.path.join("outputs", "pdp_src_bytes.svg")
     save_line_chart(
-        income_values,
-        income_pdp,
-        "PDP: ingreso anual (escalado)",
+        volume_values,
+        volume_pdp,
+        "PDP: bytes salientes (estandarizados)",
         "Valor estandarizado",
-        "Probabilidad de buen crédito",
-        income_chart_path,
+        "Probabilidad de intrusión",
+        volume_chart_path,
     )
 
-    debt_chart_path = os.path.join("outputs", "pdp_debt_ratio.svg")
+    alert_chart_path = os.path.join("outputs", "pdp_alert_count.svg")
     save_line_chart(
-        debt_values,
-        debt_pdp,
-        "PDP: razón de deuda (escalado)",
+        alert_values,
+        alert_pdp,
+        "PDP: conteo de alertas (estandarizado)",
         "Valor estandarizado",
-        "Probabilidad de buen crédito",
-        debt_chart_path,
+        "Probabilidad de intrusión",
+        alert_chart_path,
     )
 
-    print(f"Saved PDP charts to {income_chart_path} and {debt_chart_path}")
+    print(f"Saved PDP charts to {volume_chart_path} and {alert_chart_path}")
 
     # individual explanations for two samples
     if X_test:

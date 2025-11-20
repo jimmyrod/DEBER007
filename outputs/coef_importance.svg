@@ -3,21 +3,24 @@
 <line x1='80' y1='80' x2='80' y2='400' stroke='black' stroke-width='2'/>
 <line x1='80' y1='400' x2='760.0' y2='400' stroke='black' stroke-width='2'/>
 <rect x='80' y='80.0' width='30' height='320.0' fill='#4a90e2'/>
-<text x='95.0' y='418' text-anchor='middle' font-size='12'>annual_income</text>
-<text x='95.0' y='75.0' text-anchor='middle' font-size='12'>2.199</text>
-<rect x='135' y='89.87893609462253' width='30' height='310.12106390537747' fill='#4a90e2'/>
-<text x='150.0' y='418' text-anchor='middle' font-size='12'>prior_defaults</text>
-<text x='150.0' y='84.87893609462253' text-anchor='middle' font-size='12'>2.131</text>
-<rect x='190' y='283.3013377243625' width='30' height='116.69866227563752' fill='#4a90e2'/>
-<text x='205.0' y='418' text-anchor='middle' font-size='12'>age</text>
-<text x='205.0' y='278.3013377243625' text-anchor='middle' font-size='12'>0.802</text>
-<rect x='245' y='292.23468626165754' width='30' height='107.76531373834246' fill='#4a90e2'/>
-<text x='260.0' y='418' text-anchor='middle' font-size='12'>employment_years</text>
-<text x='260.0' y='287.23468626165754' text-anchor='middle' font-size='12'>0.741</text>
-<rect x='300' y='306.62259230657315' width='30' height='93.37740769342683' fill='#4a90e2'/>
-<text x='315.0' y='418' text-anchor='middle' font-size='12'>debt_ratio</text>
-<text x='315.0' y='301.62259230657315' text-anchor='middle' font-size='12'>0.642</text>
-<rect x='355' y='340.60848954459914' width='30' height='59.391510455400876' fill='#4a90e2'/>
-<text x='370.0' y='418' text-anchor='middle' font-size='12'>education_level</text>
-<text x='370.0' y='335.60848954459914' text-anchor='middle' font-size='12'>0.408</text>
+<text x='95.0' y='418' text-anchor='middle' font-size='12'>failed_logins</text>
+<text x='95.0' y='75.0' text-anchor='middle' font-size='12'>1.558</text>
+<rect x='135' y='152.58404719428455' width='30' height='247.41595280571545' fill='#4a90e2'/>
+<text x='150.0' y='418' text-anchor='middle' font-size='12'>alert_count</text>
+<text x='150.0' y='147.58404719428455' text-anchor='middle' font-size='12'>1.205</text>
+<rect x='190' y='254.30332866292702' width='30' height='145.69667133707298' fill='#4a90e2'/>
+<text x='205.0' y='418' text-anchor='middle' font-size='12'>src_bytes</text>
+<text x='205.0' y='249.30332866292702' text-anchor='middle' font-size='12'>0.709</text>
+<rect x='245' y='269.9859757027797' width='30' height='130.0140242972203' fill='#4a90e2'/>
+<text x='260.0' y='418' text-anchor='middle' font-size='12'>dst_bytes</text>
+<text x='260.0' y='264.9859757027797' text-anchor='middle' font-size='12'>0.633</text>
+<rect x='300' y='294.16783453627204' width='30' height='105.83216546372796' fill='#4a90e2'/>
+<text x='315.0' y='418' text-anchor='middle' font-size='12'>duration_sec</text>
+<text x='315.0' y='289.16783453627204' text-anchor='middle' font-size='12'>0.515</text>
+<rect x='355' y='371.24831480820933' width='30' height='28.75168519179069' fill='#4a90e2'/>
+<text x='370.0' y='418' text-anchor='middle' font-size='12'>sensitive_access</text>
+<text x='370.0' y='366.24831480820933' text-anchor='middle' font-size='12'>0.140</text>
+<rect x='410' y='384.6732603801808' width='30' height='15.326739619819202' fill='#4a90e2'/>
+<text x='425.0' y='418' text-anchor='middle' font-size='12'>internal_dest</text>
+<text x='425.0' y='379.6732603801808' text-anchor='middle' font-size='12'>0.075</text>
 </svg>
