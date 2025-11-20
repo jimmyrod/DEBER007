@@ -1,0 +1,26 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='800' height='480'>
+<text x='400.0' y='40' text-anchor='middle' font-size='20'>Permutation Feature Importance</text>
+<line x1='80' y1='80' x2='80' y2='400' stroke='black' stroke-width='2'/>
+<line x1='80' y1='400' x2='760.0' y2='400' stroke='black' stroke-width='2'/>
+<rect x='80' y='80.0' width='30' height='320.0' fill='#4a90e2'/>
+<text x='95.0' y='418' text-anchor='middle' font-size='12'>failed_logins</text>
+<text x='95.0' y='75.0' text-anchor='middle' font-size='12'>0.089</text>
+<rect x='135' y='195.0561797752809' width='30' height='204.9438202247191' fill='#4a90e2'/>
+<text x='150.0' y='418' text-anchor='middle' font-size='12'>src_bytes</text>
+<text x='150.0' y='190.0561797752809' text-anchor='middle' font-size='12'>0.057</text>
+<rect x='190' y='213.03370786516854' width='30' height='186.96629213483146' fill='#4a90e2'/>
+<text x='205.0' y='418' text-anchor='middle' font-size='12'>alert_count</text>
+<text x='205.0' y='208.03370786516854' text-anchor='middle' font-size='12'>0.052</text>
+<rect x='245' y='310.1123595505618' width='30' height='89.8876404494382' fill='#4a90e2'/>
+<text x='260.0' y='418' text-anchor='middle' font-size='12'>dst_bytes</text>
+<text x='260.0' y='305.1123595505618' text-anchor='middle' font-size='12'>0.025</text>
+<rect x='300' y='342.4719101123595' width='30' height='57.52808988764045' fill='#4a90e2'/>
+<text x='315.0' y='418' text-anchor='middle' font-size='12'>duration_sec</text>
+<text x='315.0' y='337.4719101123595' text-anchor='middle' font-size='12'>0.016</text>
+<rect x='355' y='367.64044943820227' width='30' height='32.359550561797754' fill='#4a90e2'/>
+<text x='370.0' y='418' text-anchor='middle' font-size='12'>sensitive_access</text>
+<text x='370.0' y='362.64044943820227' text-anchor='middle' font-size='12'>0.009</text>
+<rect x='410' y='400.0' width='30' height='0.0' fill='#4a90e2'/>
+<text x='425.0' y='418' text-anchor='middle' font-size='12'>internal_dest</text>
+<text x='425.0' y='395.0' text-anchor='middle' font-size='12'>0.000</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='820' height='500'>
+<text x='410.0' y='40' text-anchor='middle' font-size='20'>PDP: conteo de alertas (estandarizado)</text>
+<line x1='80' y1='80' x2='80' y2='420' stroke='black' stroke-width='2'/>
+<line x1='80' y1='420' x2='740' y2='420' stroke='black' stroke-width='2'/>
+<polyline fill='none' stroke='#e67e22' stroke-width='3' points='80.0,420.0 162.5,338.7010947196842 245.0,267.8581982968974 327.5,209.16772699640597 410.0,163.11226216632053 492.5,128.9821383583049 575.0,105.19305646895742 657.5,89.62359220452367 740.0,80.0'/>
+<circle cx='80.0' cy='420.0' r='4' fill='#e67e22'/>
+<circle cx='162.5' cy='338.7010947196842' r='4' fill='#e67e22'/>
+<circle cx='245.0' cy='267.8581982968974' r='4' fill='#e67e22'/>
+<circle cx='327.5' cy='209.16772699640597' r='4' fill='#e67e22'/>
+<circle cx='410.0' cy='163.11226216632053' r='4' fill='#e67e22'/>
+<circle cx='492.5' cy='128.9821383583049' r='4' fill='#e67e22'/>
+<circle cx='575.0' cy='105.19305646895742' r='4' fill='#e67e22'/>
+<circle cx='657.5' cy='89.62359220452367' r='4' fill='#e67e22'/>
+<circle cx='740.0' cy='80.0' r='4' fill='#e67e22'/>
+<text x='410.0' y='480' text-anchor='middle' font-size='14'>Valor estandarizado</text>
+<text x='20' y='250.0' transform='rotate(-90 20,250.0)' text-anchor='middle' font-size='14'>Probabilidad de intrusión</text>
+</svg>
