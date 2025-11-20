@@ -1,0 +1,23 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='800' height='480'>
+<text x='400.0' y='40' text-anchor='middle' font-size='20'>Permutation Feature Importance</text>
+<line x1='80' y1='80' x2='80' y2='400' stroke='black' stroke-width='2'/>
+<line x1='80' y1='400' x2='760.0' y2='400' stroke='black' stroke-width='2'/>
+<rect x='80' y='80.0' width='30' height='320.0' fill='#4a90e2'/>
+<text x='95.0' y='418' text-anchor='middle' font-size='12'>annual_income</text>
+<text x='95.0' y='75.0' text-anchor='middle' font-size='12'>0.227</text>
+<rect x='135' y='122.35294117647055' width='30' height='277.64705882352945' fill='#4a90e2'/>
+<text x='150.0' y='418' text-anchor='middle' font-size='12'>prior_defaults</text>
+<text x='150.0' y='117.35294117647055' text-anchor='middle' font-size='12'>0.197</text>
+<rect x='190' y='316.47058823529403' width='30' height='83.52941176470594' fill='#4a90e2'/>
+<text x='205.0' y='418' text-anchor='middle' font-size='12'>employment_years</text>
+<text x='205.0' y='311.47058823529403' text-anchor='middle' font-size='12'>0.059</text>
+<rect x='245' y='323.52941176470586' width='30' height='76.47058823529417' fill='#4a90e2'/>
+<text x='260.0' y='418' text-anchor='middle' font-size='12'>age</text>
+<text x='260.0' y='318.52941176470586' text-anchor='middle' font-size='12'>0.054</text>
+<rect x='300' y='352.9411764705882' width='30' height='47.058823529411804' fill='#4a90e2'/>
+<text x='315.0' y='418' text-anchor='middle' font-size='12'>debt_ratio</text>
+<text x='315.0' y='347.9411764705882' text-anchor='middle' font-size='12'>0.033</text>
+<rect x='355' y='369.4117647058823' width='30' height='30.58823529411769' fill='#4a90e2'/>
+<text x='370.0' y='418' text-anchor='middle' font-size='12'>education_level</text>
+<text x='370.0' y='364.4117647058823' text-anchor='middle' font-size='12'>0.022</text>
+</svg>
